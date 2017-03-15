@@ -1,8 +1,0 @@
-package Test0308;
-
-public class Cat {
-	//×¥ÀÏÊó
-	public void cathMouse(){
-		
-	}
-}

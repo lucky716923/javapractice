@@ -1,9 +1,0 @@
-package Test0308;
-
-public class Dog {
-	//¿´¼Ò
-	public void lookAfterHouse(){
-		
-	}
-
-}
