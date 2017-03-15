@@ -1,0 +1,15 @@
+package Test0310;
+//short s; byte b; char c; 则表达式s * b + c
+public  abstract  class Test {   
+	  static short s=45;
+	  static byte b=23;
+	  static char c='a';
+	public static void main(String[] args) {
+		System.out.println(s*b+c);
+	}
+	
+	} 
+
+
+
+

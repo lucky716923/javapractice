@@ -1,0 +1,8 @@
+package Test0308;
+
+public class Cat extends Pet{
+	//×¥ÀÏÊó
+	public void cathMouse(){
+		
+	}
+}

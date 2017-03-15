@@ -1,0 +1,7 @@
+package Test0308;
+
+public class Cat {
+	public void cathMouse(){
+		
+	}
+}

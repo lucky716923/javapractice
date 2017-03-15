@@ -1,0 +1,10 @@
+package com.team1.flower.po;
+
+public class Order {
+	private String name;
+	public static void main(String[] args) {
+		Order or=new Order();
+		or.name="";
+	}
+
+}

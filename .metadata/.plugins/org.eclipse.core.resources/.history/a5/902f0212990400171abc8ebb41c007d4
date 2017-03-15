@@ -1,0 +1,29 @@
+package Test0309;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class ServerThread extends Thread{
+	private Socket s;
+
+	public ServerThread(Socket s) {
+		super();
+		this.s = s;
+	}
+	
+	public void  run(){
+		BufferedReader br=null;
+		PrintWriter pw=null;
+		try {
+		br=new BufferedReader(new InputStreamReader(s.getInputStream()));	
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

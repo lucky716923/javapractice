@@ -1,0 +1,12 @@
+package Test0309Practice;
+
+import java.net.Socket;
+
+public class MainTest {
+	private Socket s;
+	public static void main(String[] args) {
+		while(true){
+			
+		}	
+	}
+}

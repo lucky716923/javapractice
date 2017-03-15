@@ -1,0 +1,18 @@
+package Test0313;
+
+public class People {
+	 public static String name;
+	 public static int age;
+	 
+	public People(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	public String PrintInfo(){
+		return "ĞÕÃûÎª£º"+name+"ÄêÁä"+age;
+	}
+	
+
+}

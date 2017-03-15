@@ -1,0 +1,29 @@
+package Test0309;
+
+public class Student {
+	private String name;
+	private int age;
+	
+	public Student(String name, int age) {
+		System.out.println("有参数的构造方法");
+		this.name = name;
+		this.age = age;
+	}
+
+	public Student(int age) {
+		super();
+		this.age = age;
+	}
+
+	public Student(String name) {
+		super();
+		this.name = name;
+	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

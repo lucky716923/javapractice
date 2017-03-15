@@ -1,0 +1,10 @@
+package Test0308;
+
+public class Dog {
+	//	Ã«É«
+	private String color;
+	//	Ãû×Ö
+	private String name;
+	
+
+}

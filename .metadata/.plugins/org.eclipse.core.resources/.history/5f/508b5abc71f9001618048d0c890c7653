@@ -1,0 +1,11 @@
+package Test0223;
+
+public class Vehicle {
+	private String loadCapicity;
+	private String name;
+	private String type;
+	public void showInfo(){
+		System.out.println(name+loadCapicity+type);
+	}
+
+}

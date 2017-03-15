@@ -1,0 +1,15 @@
+package Test0313;
+
+public class Student extends People{
+    public String stuNumber;
+	public Student(String stuNumber) {
+		super(name,age);
+		this.stuNumber=stuNumber;
+	}
+	public String PrintInfo(){
+		return "姓名为："+name+"年龄"+age+"学号"+stuNumber;
+	}
+   public static void main(String[] args) {
+	Student p=new Student("00001");
+}
+}

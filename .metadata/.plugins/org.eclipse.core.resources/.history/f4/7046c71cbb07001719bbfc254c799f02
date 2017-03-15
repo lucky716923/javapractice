@@ -1,0 +1,21 @@
+package Test0310;
+
+public  abstract  class Test {   
+	  private static String carName;  
+	  public static int mileage;   
+	  private static final int TOP_SPEED = 200; 
+	  abstract void alert();  
+	  public static int getTopSpeed() { 
+	    return TOP_SPEED; 
+	  }  
+	  public static void setCarName() { 
+	    carName = "°ÂµÏ"; 
+	  }  
+	  public static void setMileage() { 
+	    mileage = 180; 
+	  } 
+	} 
+
+
+
+

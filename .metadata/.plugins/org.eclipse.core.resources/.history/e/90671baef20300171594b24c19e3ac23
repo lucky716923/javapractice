@@ -1,0 +1,5 @@
+package Test0308;
+	//向上抽取的父类
+public class Pet {
+
+}

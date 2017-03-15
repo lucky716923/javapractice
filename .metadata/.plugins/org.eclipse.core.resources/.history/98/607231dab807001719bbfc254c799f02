@@ -1,0 +1,11 @@
+package Test0313;
+
+public class Student extends People{
+    public String stuNumber;
+	public Student(String stuNumber) {
+		super(name,age);
+		this.stuNumber=stuNumber;
+	}
+	
+
+}

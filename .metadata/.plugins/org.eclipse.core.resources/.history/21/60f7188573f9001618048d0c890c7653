@@ -1,0 +1,32 @@
+package Test0223;
+
+public class Vehicle {
+	private int loadCapicity;
+	private String name;
+	
+	
+	public String getLoadCapicity() {
+		return loadCapicity;
+	}
+
+
+	public void setLoadCapicity(String loadCapicity) {
+		this.loadCapicity = loadCapicity;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public void showInfo(){
+		System.out.println(name+"≥–‘ÿ¡À"+loadCapicity+"»À");
+	}
+
+}

@@ -1,0 +1,7 @@
+package Test030702;
+
+import javax.swing.*;
+public class MousePractice {
+	private JLabel la1=new J
+
+}

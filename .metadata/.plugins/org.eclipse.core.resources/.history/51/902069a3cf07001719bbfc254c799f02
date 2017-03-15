@@ -1,0 +1,118 @@
+package com.team1.flower.manage;
+
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
+
+import com.team1.flower.po.Flower;
+
+public class FlowerManage {
+	static Scanner input = new Scanner(System.in);
+	static List<Flower> flower = new ArrayList<Flower>();
+	static Flower f=new Flower();
+	static {
+		flower.add(new Flower( "红玫瑰", "爱情", "真心真意", 20, 200));
+		flower.add(new Flower( "康乃馨", "祝福", "伟大、神圣、慈祥的母亲", 20, 200));
+		flower.add(new Flower( "紫郁金香 ", "爱情", "永不磨灭的爱情", 10, 300));
+		flower.add(new Flower("黄百合", "祝福", "衷心祝福", 12, 200));
+		flower.add(new Flower( "勿忘我", "祝福", "浓情厚意，永恒的友谊", 20, 200));
+		flower.add(new Flower( "红康乃馨", "祝福", " 祝母亲健康长寿", 20, 200));
+		flower.add(new Flower( "百合花", "祝福", "百年好合，心心相应", 20, 200));
+	}
+
+	// 打印出所有花的信息
+	public static void printFlowerInfo() {
+		int j=0;
+		for (int i = 0; i < flower.size(); i++) {
+			j++;
+			System.out.println(j+"："+flower.get(i));	
+		}
+	}
+
+	// 增加花的信息
+	public static void addFlower() {
+		Flower f = new Flower();
+		while (true) {
+			System.out.println("请输入花名：");
+			f.setFlowerName(getInputStr());
+			System.out.println("请输入花语：");
+			f.setFlowerLanguage(getInputStr());
+			System.out.println("请输入类型：");
+			f.setFlowerType(getInputStr());
+			System.out.println("请输入价格：");
+			f.setFlowerPrice(getInputInt());
+			System.out.println("请输入数量：");
+			f.setFlowerCount(getInputInt());
+			flower.add(f);
+			break;
+		}
+
+	}
+     
+	// 删除某种花
+	public static void delete() {
+		System.out.println("请输入您要删除的花名：");
+		String name=input.next();
+		getInputStr();
+		for (int i=0;i<flower.size(); i++) {
+			if(flower.get(i).flowerName.equals(name))
+				flower.remove(i);
+			
+		}
+
+	}
+     //给某种花增加支数
+	public static void addFlowerCount(){
+		System.out.println("请输入您想要进的花：");
+		String flowerName=getInputStr();
+		System.out.println("请输入您想要进的数量：");
+		int count=getInputInt();
+		for (int i=0;i<flower.size(); i++) {
+			if(flowerName.equals(flower.get(i).flowerName)){
+				int flowerCount=flower.get(i).flowerCount+count;
+				flower.get(i).setFlowerCount(flowerCount);
+		     }
+		     }
+		
+	}
+	
+	public static String  getInputStr(){
+		String str;
+		while(true){
+			str = null;
+			try{
+				str = input.next();
+				break;
+			} catch (InputMismatchException e){
+				input.nextLine();
+				System.out.println("输入有误");
+			}
+		}
+		return str;
+	}
+	
+	public static int getInputInt(){
+		int str;
+		while(true){
+			str =0;
+			try{
+				str = input.nextInt();
+				break;
+			} catch (InputMismatchException e){
+				input.nextLine();
+				System.out.println("输入有误");
+			}
+		}
+		return str;
+	}
+	public static void main(String[] args) {
+		printFlowerInfo();
+		addFlower();
+		printFlowerInfo();
+		delete();
+		printFlowerInfo();
+		addFlowerCount();  
+		printFlowerInfo();
+	}
+}

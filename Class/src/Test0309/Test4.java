@@ -1,0 +1,26 @@
+package Test0309;
+
+import java.lang.reflect.Field;
+
+
+public class Test4 {
+	public static void main(String[] args) {
+		Class<?> st=null;
+		Student s=null;
+		try{
+			st=Class.forName("Test0309.Student");
+			s=(Student)st.newInstance();
+			Field name=st.getField("name");
+			Field age=st.getField("age");
+			name.set(s, "¹þ¹þ");
+			age.setInt(s, 120);
+			System.out.println(name.get(s)+"    "+age.getInt(s));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+		
+
+
+}

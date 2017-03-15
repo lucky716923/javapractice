@@ -1,0 +1,8 @@
+package Test0223;
+
+public class SteamShip {
+	public void showSteamShipInfo(){
+		showInfo();
+	}
+
+}

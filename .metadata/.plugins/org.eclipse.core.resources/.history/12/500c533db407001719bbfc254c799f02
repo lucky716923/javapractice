@@ -1,0 +1,13 @@
+package Test0313;
+
+import java.util.Scanner;
+
+public class Salary {
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.print("请输入员工姓名：");
+		String name=input.next();
+		
+	}
+
+}

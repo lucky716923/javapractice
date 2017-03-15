@@ -1,0 +1,30 @@
+package Test0308;
+
+public class Cat {
+	//Ãû×Ö
+	private String name;
+	//Ã«É«
+	private String color;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void eate(Food food){
+		
+	}
+	public void cathMouse(){
+		
+	}
+	public void sleep(){
+		
+	}
+}

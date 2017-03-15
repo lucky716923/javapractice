@@ -1,0 +1,31 @@
+package Test0309Practice;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MainTest {
+	private static Socket s;
+	private static ServerSocket ss=null;
+	public static void main(String[] args) {
+		try {
+			ss=new ServerSocket(5500);
+			System.out.println("服务器正常启动。。。");
+			while(true){
+				try {
+					s=ss.accept();
+					System.out.println("已成功连接");
+					new SeverTest(s).start();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}	
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+	}
+}

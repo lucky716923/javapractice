@@ -1,0 +1,17 @@
+package Test0310;
+
+public class SingleTon {
+	private SingleTon(){}
+	
+	static SingleTon sing=new SingleTon();
+	
+	public static SingleTon getIstance(){
+		return sing;
+	}
+	
+	public static void main(String[] args) {
+//		new SingleTon();
+		SingleTon	hu=SingleTon.getIstance();
+	}
+
+}

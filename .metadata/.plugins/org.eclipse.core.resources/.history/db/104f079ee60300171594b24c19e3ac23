@@ -1,0 +1,30 @@
+package Test0308;
+
+public class Ticket implements Runnable{
+	private TicketShop tick=null;
+	private static String name;
+
+	public Ticket(TicketShop tick) {
+		this.tick=tick;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		boolean flag=false;
+		for (int i = 1; i < 10; i++) {
+			if(flag){
+				name="窗口A";
+				this.tick.product("西安", "渭南"+i);
+				System.out.println(name+"已成功购买从"+tick.getStartName()+"到"+tick.getStopName()+"的火车票");
+				flag=false;
+			}
+			else{
+				name="窗口B";
+				this.tick.product("西安", "成都"+i);
+				System.out.println(name+"已成功购买从"+tick.getStartName()+"到"+tick.getStopName()+"的火车票");
+				flag=true;
+		    }
+	  }
+   }
+}

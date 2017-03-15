@@ -1,0 +1,29 @@
+package com.team1.flower.manage;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.team1.flower.po.Flower;
+import com.team1.flower.po.Order;
+
+public class OrderManage {
+	static Scanner input=new Scanner(System.in);
+	static List<Flower> list = new ArrayList<Flower>();
+	static List<Order> order = new ArrayList<Order>();
+	public static void lookOrder() {
+		int sum=0;
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println((i + 1) + "：" + list.get(i).flowerName + "\t"
+					+ list.get(i).flowerType + "\t"
+					+ list.get(i).flowerLanguage + "\t"
+					+ list.get(i).flowerPrice + "\t" + list.get(i).flowerCount);
+			sum+=list.get(i).flowerPrice*list.get(i).flowerCount;
+		}
+		System.out.println("您此次消费金额为："+sum);
+	}
+	
+	public static void main(String[] args) {
+		lookOrder();
+	}
+}

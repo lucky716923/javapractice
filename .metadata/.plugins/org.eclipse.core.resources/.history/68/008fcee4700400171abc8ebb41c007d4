@@ -1,0 +1,27 @@
+package Test0309;
+
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Sever {
+	 private static BufferedReader  br=null;
+	 private static PrintWriter bw=null;
+	 private static ServerSocket ss;
+	 private static Socket s;
+	 static Scanner input=new Scanner(System.in);
+	
+	 public static void main(String[] args) {
+		 try {
+			ss=new ServerSocket(5500);
+			System.out.println("服务器正常启动........");
+			s=ss.accept();
+			System.out.println("连接成功"+s.getRemoteSocketAddress());
+			br=new BufferedReader(new InputStreamReader(s.getInputStream()));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}
+}

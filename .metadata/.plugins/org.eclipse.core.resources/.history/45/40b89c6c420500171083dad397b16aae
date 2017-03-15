@@ -1,0 +1,19 @@
+package Test0309Practice;
+
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class SeverTest {
+	private static ServerSocket ss=null;
+	private static Socket s;
+	private BufferedReader br=null;
+	private PrintWriter pw=null;
+	static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+	}
+
+}

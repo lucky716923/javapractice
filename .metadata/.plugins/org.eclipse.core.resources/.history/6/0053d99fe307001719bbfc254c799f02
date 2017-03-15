@@ -1,0 +1,56 @@
+package com.team1.flower.manage;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.team1.flower.po.Flower;
+public class Customer {
+	static FlowerManage fm;
+	static Scanner input=new Scanner(System.in);
+	public double pay(){
+		double sum=0;
+		for (int i = 0; i < fm.flower.size(); i++) {
+			sum+=fm.flower.get(i).getFlowerPrice();
+		}
+		return sum;
+	}
+	public static void choosefood(){
+		System.out.println("请选择您需要的花：");
+		List<Flower> list=new ArrayList<Flower>();
+		while(true){
+			String name=input.next();
+			System.out.println("请输入您想买的数量：");
+			int count=FlowerManage.getInputInt();
+			for (int i = 0; i < fm.flower.size(); i++) {
+				if(name.equals(fm.flower.get(i).flowerName)){
+					int flowerCount=fm.flower.get(i).flowerCount+count;
+					fm.flower.get(i).setFlowerCount(flowerCount);
+					list.add(fm.flower.get(i));
+				}
+			}
+			for (int i = 0; i < list.size(); i++) {
+				System.out.println(list.get(i));
+			}
+			
+		}
+//		System.out.println("您选择的是以下菜品");
+		
+		
+	}
+//	
+//	public String leaveword(){
+//		System.out.println("您是否需要留言，请选择对应序号\n1.留言\n2.不需要留言");
+//		Scanner sc=new Scanner(System.in);
+//		int opt=sc.nextInt();
+//		if(opt==2)
+//			return "";
+//		System.out.println("请您留言");
+//		String word=sc.next();
+//		System.out.println("留言成功");
+//		return word;
+//	}
+	public static void main(String[] args) {
+		choosefood();
+	}
+}

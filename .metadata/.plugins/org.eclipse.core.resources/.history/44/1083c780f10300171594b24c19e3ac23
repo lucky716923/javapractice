@@ -1,0 +1,13 @@
+package Test0308;
+
+public class Food {
+	//Ê³Îï
+	private String name;
+
+	public Food() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

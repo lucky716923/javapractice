@@ -1,0 +1,14 @@
+
+package com.team1.flower.po;
+
+public class Flower {
+	private String flowerName;
+	private int flowerNumber;
+	private int flowerPrice;
+	private String flowerLanguage;
+	private int flowerCount;
+	private String flowerType;
+	private boolean statue;
+	
+
+}

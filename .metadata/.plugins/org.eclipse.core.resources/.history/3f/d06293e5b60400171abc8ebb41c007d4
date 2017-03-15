@@ -1,0 +1,51 @@
+package Test0309;
+
+public class Student {
+	public String name;
+	public int age;
+	
+	public Student(String name, int age) {
+		System.out.println("有参数的构造方法");
+		this.name = name;
+		this.age = age;
+	}
+
+	public Student(int age) {
+		super();
+		this.age = age;
+	}
+
+	public Student(String name) {
+		super();
+		this.name = name;
+	}
+
+	public Student() {
+		System.out.println("无参数的构造方法");
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		System.out.println("haha");
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + "]";
+	}
+	
+
+}

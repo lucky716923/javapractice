@@ -1,0 +1,10 @@
+
+public class Math {
+static int plus(int a,int b){
+return a*b;
+}
+public static void main(String[] args){
+//plus(5,8);
+System.out.print("ÖÜ³¤:"+plus(5,8));
+}
+}

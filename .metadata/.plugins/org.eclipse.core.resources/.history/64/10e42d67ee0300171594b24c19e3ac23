@@ -1,0 +1,7 @@
+package Test0308homework;
+
+public class Test {
+	People p=new People("уехЩ");
+	
+
+}

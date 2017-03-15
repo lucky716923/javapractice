@@ -1,0 +1,13 @@
+package Test0313;
+
+public class Teacher extends People{
+    public int salary;
+	public Teacher(String name, int age) {
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+	public String PrintInfo(){
+		return "姓名为："+name+"年龄"+age+"薪水"+salary;
+	}
+
+}

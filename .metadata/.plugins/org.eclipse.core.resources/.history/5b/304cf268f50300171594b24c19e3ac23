@@ -1,0 +1,22 @@
+package com.team1.pet;
+
+
+public class Dog extends Pet{
+	//¿´¼Ò
+	public void lookAfterHouse(){
+		
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sleep() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

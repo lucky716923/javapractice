@@ -1,0 +1,50 @@
+package Test0309;
+
+import java.lang.reflect.Field;
+
+public class Test4 {
+	public static void main(String[] args) {
+		Class<?> st=null;
+		Student s=null;
+		try {
+			st=Class.forName("day0309.Student");
+			try {
+				s=(Student)st.newInstance();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			Field name=st.getField("name");
+			Field age=st.getField("age");
+			try {
+				name.set(s, "¹þ¹þ");
+				age.setInt(s, 120);
+				System.out.println(name.get(s)+"    "+age.getInt(s));
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
+
+
+}

@@ -1,0 +1,25 @@
+package com.team1.pet;
+
+
+public class Cat extends Pet{
+	//×¥ÀÏÊó
+	public void cathMouse(){
+		
+	}
+
+
+
+	@Override
+	public void sleep() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void eat(Food food) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,15 @@
+package Test030702;
+
+import java.util.Timer;
+
+import javax.swing.JLabel;
+
+public class MousePractice {
+	private JLabel la1=new JLabel();
+	private JLabel la2=new JLabel();
+	public MousePractice(){
+		Timer time=new Timer();
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.team1.flower.manage;
+
+import java.util.Scanner;
+
+public class OrderManage {
+	static Scanner input=new Scanner(System.in);
+	
+}

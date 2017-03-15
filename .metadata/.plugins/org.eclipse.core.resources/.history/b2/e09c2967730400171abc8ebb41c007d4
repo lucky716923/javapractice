@@ -1,0 +1,48 @@
+package Test0309;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.*;
+import java.util.Scanner;
+
+public class Client {
+	 private static BufferedReader  br=null;
+	 private static PrintWriter bw=null;
+	 private static Socket s;
+	 static Scanner input=new Scanner(System.in);
+	 public static void main(String[] args) {
+		try {
+			s=new Socket("175.3.13.3",4700);
+			br=new BufferedReader(new InputStreamReader(s.getInputStream()));
+			bw=new PrintWriter(new OutputStreamWriter(s.getOutputStream()));
+			while(true){
+				System.out.println("Client客户端请输入：");
+				String str=input.next();
+				bw.println();
+				bw.flush();
+				String string=br.readLine();
+				System.out.println("客户端读取到"+string);
+				if(str.equals("exit")){
+					break;
+				}
+			}
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		bw.close();
+	}
+
+}

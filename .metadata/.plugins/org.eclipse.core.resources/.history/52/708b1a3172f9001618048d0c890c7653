@@ -1,0 +1,11 @@
+package Test0223;
+
+public class Car extends Vehicle{
+	
+	public void showCarInfo(){
+		showInfo();
+		System.out.println();
+		
+	}
+
+}

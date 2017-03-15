@@ -1,0 +1,17 @@
+package com.team1.flower.manage;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.team1.flower.po.User;
+
+public class UserManage {
+	static Scanner input=new Scanner(System.in);
+	static List<User> user=new ArrayList<User>();
+	static {
+		new User("小明","13456","普通用户");
+	}
+	
+
+}

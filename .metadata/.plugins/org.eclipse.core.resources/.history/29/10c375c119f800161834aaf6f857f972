@@ -1,0 +1,143 @@
+package com.javateam1.restuarant.model;
+import java.util.Scanner;
+
+public class FoodList {
+
+	Food[] food = { new Food("砂锅米线               ", 8),
+			new Food("砂锅方便面         ", 8), new Food("砂锅宽粉             ", 8),
+			new Food("砂锅龙须面             ", 8),
+			new Food("牛肉面           ", 10, "大份"),
+			new Food("牛肉面           ", 9, "小份"),
+			new Food("油泼面           ", 10, "大份"),
+			new Food("油泼面           ", 9, "小份"), new Food("臊子汤面  ", 10, "大份"),
+			new Food("臊子汤面   ", 9, "小份"), new Food("臊子干拌面", 10, "大份"),
+			new Food("臊子干拌面", 9, "小份") };
+	Food[] foodlist = new Food[40];
+
+	// 打印列表
+	public FoodList() {
+		System.arraycopy(food, 0, foodlist, 0, food.length); // 值拷贝
+	}
+
+	public Food[] getFoodlist() {
+		return foodlist;
+	}
+
+	public void setFoodlist(Food[] foodlist) {
+		this.foodlist = foodlist;
+	}
+
+	public void printFoodlist() {
+		for (int i = 0; i < foodlist.length; i++) {
+			if (foodlist[i] == null) {
+				break;
+			} else {
+				System.out.println((i + 1) + "." + foodlist[i]);
+			}
+		}
+	}
+
+	// 列表的真实长度
+	public int getListLength() {
+		int length = 0;
+		for (int i = 0; i < foodlist.length; i++) {
+			if (foodlist[i] == null) {
+				break;
+			} else {
+				length = i;
+			}
+		}
+		return length;
+	}
+
+	// 添加食物
+	public void addFood() {
+		FoodList fl = new FoodList();
+		Scanner ad = new Scanner(System.in);
+		int i = 0;
+		while (true) {
+			Food f = new Food();
+			System.out.println("1.增加菜单     2.退出");
+			int c = ad.nextInt();
+			if (c == 1) {
+				System.out.println("请输入食物名称：         例如：油泼面");
+				f.setName(ad.next());
+				System.out.println("请输入食物价格：          例如：7");
+				f.setPrice(ad.nextInt());
+				System.out.println("请输入食物规格：          例如： 大碗  ");
+				f.setSize(ad.next());
+				if (fl.getListLength() >= foodlist.length) {
+					System.out.println("超出所定义的长度");
+				} else {
+					foodlist[fl.getListLength() + i + 1] = f;
+					i++;
+				}
+			} else {
+				break;
+			}
+		}
+	}
+
+	public void choosefood() {
+		FoodList fl = new FoodList();
+		Scanner s = new Scanner(System.in);
+		System.out.println("1.选择食物     2.退出");
+		int a=s.nextInt();
+		while (true) {
+			Food f = new Food();
+			if (a == 1) {
+				System.out.println("请输入你所需要的序号");
+				int choose = s.nextInt();
+			if (choose > 0 && choose < fl.getListLength()) {
+				System.out.println(fl.foodlist[choose - 1]);
+			} else {
+				System.out.println("您的输入有错");
+			}
+			}else{
+				break;
+			}
+		}
+	}
+
+	// // 删除食物
+	// public void muniFood() {
+	// Food f = new Food();
+	// Scanner muni = new Scanner(System.in);
+	// String munifood = muni.next();
+	// FoodList fl = new FoodList();
+	// for(int i=0;i<foodlist.length;i++);
+	// if(munifood.equals(f.name)){
+	// delete
+	//
+	// }
+	// } else {
+	// System.out.println("您的输入错误");
+	// }
+	// }
+
+	public void indexFood() {
+		Scanner ad = new Scanner(System.in);
+		System.out.println("请输入索引对象：         例如：油泼面");
+		String s = ad.next();
+
+	}
+
+	// public void nameFood() {
+	// Food f = new Food();
+	// Scanner ad = new Scanner(System.in);
+	// System.out.println("请输入食物名称：         例如：油泼面");
+	// String s=ad.next();
+	// if(s.equals(f.getName())){
+	// System.out.println(foodlist);
+	// }
+
+	// }
+
+	public static void main(String[] args) {
+		FoodList fl = new FoodList();
+//		fl.addFood();
+//		fl.printFoodlist();
+		fl.choosefood();
+		// fl.muniFood();
+	}
+}

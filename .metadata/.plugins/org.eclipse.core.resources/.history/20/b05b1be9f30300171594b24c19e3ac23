@@ -1,0 +1,11 @@
+package Test0308;
+
+import com.team1.pet.Pet;
+
+public class Dog extends Pet{
+	//¿´¼Ò
+	public void lookAfterHouse(){
+		
+	}
+
+}

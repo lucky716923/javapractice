@@ -1,0 +1,14 @@
+package Test0310;
+
+public class Test {
+	  int count = 9;
+	    public void count() {
+	        System.out.println("count=" + count++);
+	    }
+	    public static void main(String args[]) {
+	        new Test().count();
+	        new Test().count();
+	    }
+
+}
+

@@ -1,0 +1,67 @@
+package com.team1.flower.manage;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.team1.flower.po.Flower;
+
+public class Customer {
+	static FlowerManage fm;
+	static Scanner input = new Scanner(System.in);
+	static List<Flower> list = new ArrayList<Flower>();
+	public static void choosefood() {
+		while (true) {
+			System.out.print("请选择您需要的花的序号：【以0结束】");
+			int number = input.nextInt();
+			if (number == 0) {
+				break;
+			} else {
+				System.out.print("请输入您想买的数量：");
+				int count = FlowerManage.getInputInt();
+				for (int i = 0; i < fm.flower.size(); i++) {
+					if (number == fm.flower.get(i).flowerNumber) {
+						int flowerCount = fm.flower.get(i).flowerCount - count;
+						fm.flower.get(i).setFlowerCount(count);
+						list.add(fm.flower.get(i));
+					}
+				}
+			}
+
+		}
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println((i + 1) + "：" + list.get(i).flowerName + "\t"
+					+ list.get(i).flowerType + "\t"
+					+ list.get(i).flowerLanguage + "\t"
+					+ list.get(i).flowerPrice + "\t" + list.get(i).flowerCount);
+		}
+	}
+
+	public static void lookOrder() {
+		System.out.println("您所选的订单如下：");
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println((i + 1) + "：" + list.get(i).flowerName + "\t"
+					+ list.get(i).flowerType + "\t"
+					+ list.get(i).flowerLanguage + "\t"
+					+ list.get(i).flowerPrice + "\t" + list.get(i).flowerCount);
+		}
+	}
+
+	public String leaveword() {
+		System.out.println("您是否需要留言，请选择对应序号\n1.留言\n2.不需要留言");
+		Scanner sc = new Scanner(System.in);
+		int opt = sc.nextInt();
+		if (opt == 2)
+			return "";
+		System.out.println("请您留言");
+		String word = sc.next();
+		System.out.println("留言成功");
+		return word;
+	}
+
+	public static void main(String[] args) {
+		choosefood();
+		lookOrder();
+		fm.flowerInfo();
+	}
+}

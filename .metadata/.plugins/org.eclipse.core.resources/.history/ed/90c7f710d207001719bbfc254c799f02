@@ -1,0 +1,129 @@
+
+package com.team1.flower.po;
+//属性：序号、花名称 、花价格、花语、支数、类型、支付状
+public class Flower {
+	public  String flowerName;//花名
+	public int flowerNumber;//序号
+	public int flowerPrice;//花价格
+	public String flowerLanguage;//花语
+	public int flowerCount;//支数
+	public String flowerType;//类型
+	public  boolean statue;//支付状态
+	
+	public String getFlowerName() {
+		return flowerName;
+	}
+	public void setFlowerName(String flowerName) {
+		this.flowerName = flowerName;
+	}
+	public int getFlowerNumber() {
+		return flowerNumber;
+	}
+	public void setFlowerNumber(int flowerNumber) {
+		this.flowerNumber = flowerNumber;
+	}
+	public int getFlowerPrice() {
+		return flowerPrice;
+	}
+	public void setFlowerPrice(int flowerPrice) {
+		this.flowerPrice = flowerPrice;
+	}
+	public String getFlowerLanguage() {
+		return flowerLanguage;
+	}
+	public void setFlowerLanguage(String flowerLanguage) {
+		this.flowerLanguage = flowerLanguage;
+	}
+	public int getFlowerCount() {
+		return flowerCount;
+	}
+	public void setFlowerCount(int flowerCount) {
+		this.flowerCount = flowerCount;
+	}
+	public String getFlowerType() {
+		return flowerType;
+	}
+	public void setFlowerType(String flowerType) {
+		this.flowerType = flowerType;
+	}
+	public boolean isStatue() {
+		return statue;
+	}
+	public void setStatue(boolean statue) {
+		this.statue = statue;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + flowerCount;
+		result = prime * result
+				+ ((flowerLanguage == null) ? 0 : flowerLanguage.hashCode());
+		result = prime * result
+				+ ((flowerName == null) ? 0 : flowerName.hashCode());
+		result = prime * result + flowerNumber;
+		result = prime * result + flowerPrice;
+		result = prime * result
+				+ ((flowerType == null) ? 0 : flowerType.hashCode());
+		result = prime * result + (statue ? 1231 : 1237);
+		return result;
+	}
+	
+	public Flower() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Flower other = (Flower) obj;
+		if (flowerCount != other.flowerCount)
+			return false;
+		if (flowerLanguage == null) {
+			if (other.flowerLanguage != null)
+				return false;
+		} else if (!flowerLanguage.equals(other.flowerLanguage))
+			return false;
+		if (flowerName == null) {
+			if (other.flowerName != null)
+				return false;
+		} else if (!flowerName.equals(other.flowerName))
+			return false;
+		if (flowerNumber != other.flowerNumber)
+			return false;
+		if (flowerPrice != other.flowerPrice)
+			return false;
+		if (flowerType == null) {
+			if (other.flowerType != null)
+				return false;
+		} else if (!flowerType.equals(other.flowerType))
+			return false;
+		if (statue != other.statue)
+			return false;
+		return true;
+	}
+	public Flower(int flowerNumber,String flowerName, String flowerType,String flowerLanguage,
+			int flowerPrice, int flowerCount) {
+		super();
+		this.flowerName = flowerName;
+		this.flowerNumber = flowerNumber;
+		this.flowerPrice = flowerPrice;
+		this.flowerLanguage = flowerLanguage;
+		this.flowerCount = flowerCount;
+		this.flowerType = flowerType;
+	}
+	
+	@Override
+	public String toString() {
+		return flowerNumber+"："+花名："+  flowerName +"     "+ "类型：" + flowerType +"         "
+				+ "花语：" + flowerLanguage  +"               "+ "一支价格：" + flowerPrice +"           " + "数量："
+				+ flowerCount;
+	}
+	
+
+}

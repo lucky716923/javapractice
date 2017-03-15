@@ -1,0 +1,10 @@
+public class Animal {
+	public static void main(String[] args) {
+		String name = "猫";
+		String hoby;
+		double weight = 15;
+		double height;
+		int age = 3;
+		System.out.println("种类:" + name + "\n" + "体重:" + weight + "\n");
+	}
+}

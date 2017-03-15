@@ -1,0 +1,20 @@
+package Test0309Practice.Ticket;
+
+public class TestTicket {
+	public static void main(String[] args) {
+		Passenger p1 =new Passenger("张三");
+		TrainTicket ticket1 = new TrainTicket("T157", "0204", "20150312");
+		Passenger p2 =new Passenger("李四");
+		TrainTicket ticket2 = new TrainTicket("T157", "0205", "20150312");
+		Passenger p3 = new Passenger("王五");
+		Passenger p4 = new Passenger("孙六");
+		Passenger p5 = new Passenger("赵七");
+		
+		p1.buyTicket(ticket1);
+		p2.buyTicket(ticket2);
+		p3.buyTicket(ticket1);
+		p4.buyTicket(ticket1);
+		p5.buyTicket(ticket2);
+		
+	}
+}

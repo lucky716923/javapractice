@@ -1,0 +1,10 @@
+package Test0313;
+
+public class People {
+	public static String name;
+	public static int age;
+	public String PrintInfo(){
+		return "ĞÕÃûÎª£º"+name+"ÄêÁä"+age;
+	}
+
+}

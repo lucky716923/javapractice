@@ -1,0 +1,18 @@
+package Test0310;
+
+public class Test {
+		public static void main(String[]args){
+		String a=¡±A¡±;
+		StringBuffer b=new StringBuffer(¡°B¡±);
+		StringBuffer c=new StringBuffer(¡°c¡±);
+		Change(a,b,c);
+		System.out.println(a+¡±,¡±+b+¡±,¡±+c);
+		} 
+		Static void change(String s(S=A),StringBuffer s1,StringBuffer s2){
+		s=s+¡±1¡±;
+		S1.append(¡°1¡±);
+		S2=new StringBuffer(¡°c1¡±);
+		}
+		}
+
+}

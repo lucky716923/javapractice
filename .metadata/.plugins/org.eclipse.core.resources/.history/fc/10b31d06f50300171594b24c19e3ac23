@@ -1,0 +1,10 @@
+package com.team1.pet;
+
+
+public class Dog extends Pet{
+	//¿´¼Ò
+	public void lookAfterHouse(){
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package Test0308homework;
+
+public class Test {
+	public static void main(String[] args) {
+		People p=new People("уехЩ");
+		Ticket t=new Ticket();
+		t.buyTicket(p);
+	}
+	
+	
+
+}

@@ -1,0 +1,10 @@
+package Test0308;
+
+
+public class Dog extends Pet{
+	//¿´¼Ò
+	public void lookAfterHouse(){
+		
+	}
+
+}

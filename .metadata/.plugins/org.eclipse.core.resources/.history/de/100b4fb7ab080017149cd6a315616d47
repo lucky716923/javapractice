@@ -1,0 +1,50 @@
+package com.team1.flower.menu;
+//用户名  密码  家庭地址  手机号
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+
+import javax.swing.*;
+
+public class Regedit {
+	private JFrame frame;
+	FlowLayout fl=new FlowLayout();
+	Container con=null;
+	public Regedit(){
+		frame=new JFrame("注册页面");
+		frame.setSize(400,400);
+		frame.setLocation(100, 100);
+		frame.setLayout(fl);
+		JLabel lable1=new JLabel("用户   名：");
+		frame.add(lable1);
+		JTextField text1=new JTextField();
+		text1.setPreferredSize(new Dimension(100,20));
+		frame.add(text1);
+		JLabel lable2=new JLabel("密码      ：");
+		frame.add(lable2);
+		JTextField text2=new JTextField();
+		text2.setPreferredSize(new Dimension(100,20));
+		frame.add(text2);
+		JLabel lable3=new JLabel("家庭地址：");
+		frame.add(lable3);
+		JTextField text3=new JTextField();
+		text3.setPreferredSize(new Dimension(100,20));
+		frame.add(text3);
+		JLabel lable4=new JLabel("手机   号：");
+		frame.add(lable4);
+		JTextField text4=new JTextField();
+		text4.setPreferredSize(new Dimension(100,20));
+		frame.add(text4);
+		fl.setVgap(40);
+		fl.setHgap(70);
+		frame.setVisible(true);
+		frame.setResizable(false);
+		JButton button1=new JButton("注册");
+		JButton button2=new JButton("重置");
+		frame.add(button1);
+		frame.add(button2);
+	}
+	public static void main(String[] args) {
+		new Regedit();
+	}
+}

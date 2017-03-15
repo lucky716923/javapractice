@@ -1,0 +1,21 @@
+package Test0309;
+
+public class ClassDemo {
+	public static void main(String[] args) {
+		Student s=new Student();
+		String info=s.getClass().getName();
+		System.out.println("S对象的类路径信息是："+info);
+		Class<?> c1=null ;
+		Class<?> c2=null ;
+		Class<?> c3=null ;
+		
+		try {
+			c1=Class.forName("Test0309.student");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		c2=Student.class;
+	}
+
+}

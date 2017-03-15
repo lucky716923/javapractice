@@ -1,0 +1,20 @@
+package Test0309;
+
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Sever {
+	 private static BufferedReader  br=null;
+	 private static PrintWriter bw=null;
+	 private static ServerSocket ss;
+	 private static Socket s;
+	 
+	 Scanner input=new Scanner(System.in);
+	 ss=new ServerSocket(5500); 
+	 
+	 public static void main(String[] args) {
+		System.out.println("服务器正常启动........");
+		
+	}
+}

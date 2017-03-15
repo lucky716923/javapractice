@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AlipayManage.java&apos; to &apos;com.team1.flower.manage.FlowerManage.java&apos;&#x0D;&#x0A;- Original project: &apos;RestuarantManage&apos;&#x0D;&#x0A;- Destination element: &apos;com.team1.flower.manage.FlowerManage.java&apos;&#x0D;&#x0A;- Original element: &apos;com.team1.restuarant.manage.AlipayManage.java&apos;" description="Copy compilation unit" destination="=FlowerShop/src&lt;com.team1.flower.manage{FlowerManage.java" element1="/src&lt;com.team1.restuarant.manage{AlipayManage.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1489402123081" units="1" version="1.0"/>
+</session>
